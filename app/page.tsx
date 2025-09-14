@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Building2, Search, Download, Clock, MapPin, DollarSign } from "lucide-react"
-import Link from "next/link"
 
 const searchHistory = [
   {
@@ -155,12 +154,6 @@ export default function HomePage() {
               <Building2 className="h-8 w-8 text-primary" />
               <h1 className="text-2xl font-bold text-foreground">マンション投資検索</h1>
             </div>
-            <nav className="flex items-center gap-4">
-              <Link href="/advanced-search" className="text-muted-foreground hover:text-foreground">
-                詳細検索
-              </Link>
-              <Button variant="outline">ログイン</Button>
-            </nav>
           </div>
         </div>
       </header>
@@ -240,9 +233,9 @@ export default function HomePage() {
               </div>
 
               <div className="mt-6 text-center">
-                <Link href="/advanced-search" className="text-primary hover:text-primary/80 text-sm font-medium">
-                  詳細検索で更に絞り込む →
-                </Link>
+                <Button variant="link" className="text-primary hover:text-primary/80">
+                  <a href="/advanced-search">詳細検索はこちら</a>
+                </Button>
               </div>
             </CardContent>
           </Card>
