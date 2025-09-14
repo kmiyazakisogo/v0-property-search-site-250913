@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-import { Building2, ArrowLeft, Search, Filter } from "lucide-react"
+import { Building2, ArrowLeft, Search } from "lucide-react"
 import Link from "next/link"
 
 const prefectures = [
@@ -143,10 +143,6 @@ export default function AdvancedSearchPage() {
                 <h1 className="text-xl font-bold text-foreground">詳細検索</h1>
               </div>
             </div>
-            <Button variant="outline" onClick={resetFilters}>
-              <Filter className="h-4 w-4 mr-2" />
-              条件をリセット
-            </Button>
           </div>
         </div>
       </header>
@@ -433,10 +429,6 @@ export default function AdvancedSearchPage() {
                     >
                       <Search className="h-4 w-4 mr-2" />
                       この条件で検索
-                    </Button>
-
-                    <Button variant="outline" onClick={resetFilters} className="w-full bg-transparent">
-                      条件をリセット
                     </Button>
                   </CardContent>
                 </Card>
